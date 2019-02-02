@@ -1,6 +1,6 @@
 class Hello{
-	// ÃæÏò¶ÔÏó
+	// é¢å‘å¯¹è±¡å¼€å§‹
 	public static void main(String args[]){
-		System.out.print("Hello ÃæÏò¶ÔÏóÑ§Ï°!");	
+		System.out.print("Hello é¢å‘å¯¹è±¡å­¦ä¹ !");	
 	}
 }
