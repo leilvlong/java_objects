@@ -1,6 +1,9 @@
 // 猜数字游戏
 class GuessGame{
+	// 处理猜数字游戏的逻辑
 	public void Stratgame(){
+		// 开始猜数字游戏的运行过程 
+		
 		// 创建三个 Player 的猜数字对象
 		Player p1 = new Player();
 		Player p2 = new Player();
@@ -85,16 +88,21 @@ class GuessGame{
 }
 
 class Player{
+	//用于创建猜数字游戏的猜测数字对象
 	int number = 0;
 	public void guess(){
+		// 生成随机数猜测
 		number = (int)(Math.random()*10);
 		System.out.println("Im guessing" + " " + number);
 	}
 }
 
 class GuessNumber{
+	// 启动猜数字游戏
 	public static void main(String args[]){
+		// 创建猜数字游戏对象
 		GuessGame game = new GuessGame();
+		// 调用方法 判断
 		game.Stratgame();
 	}
 }
