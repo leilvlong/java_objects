@@ -9,3 +9,18 @@
 8. 对象可以执行的动作称为方法,它代表对象的行为
 9. 类可以继承自较为抽象的父类(起初对对象不了解,后来了解更多,继承原来的类,并给出更多的方法与属性)
 10.java的程序在执行期是一组会互相交谈的对象(创建对象,并调用对象的属性或方法得到返回的数据,再经过创建对象调用对数据进行运算)
+
+//
+由.java文件编译出来           :class
+实例变量(状态)值可以不同      :object
+功能类似模板                  :class
+执行工作                      :method, object 
+带有很多方法                  :class, object
+状态                          :instance variable
+拥有很多行为(方法)            :class, object
+呆在对象中                    :method, instance variable
+生存与堆上                    :object
+被用来创建对象实例            :class
+状态可以改变                  :object, instance variable
+声明方法                      :class
+可以在运行期变化              :object, instance variable
