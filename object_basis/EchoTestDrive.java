@@ -1,3 +1,11 @@
+/* 
+输出
+hello...
+hello...
+hello...
+hello...
+10
+*/
 public class EchoTestDrive{
 	public static void main(String[] args){
 		EchoTest e1 = new EchoTest();
@@ -19,7 +27,7 @@ public class EchoTestDrive{
 			System.out.println("x:" + x);
 			x++;
 		}
-		System.out.println("循环结束后e2.cont:"+e2.cont);
+		System.out.println("e2.cont:"+e2.cont);
 		
 	}
 }
@@ -28,7 +36,7 @@ public class EchoTestDrive{
 /*
 x = 0
 e1.cont = 1
-e2.cont = 1
+e2.cont = 0
 
 x = 1
 e1.cont = 2
