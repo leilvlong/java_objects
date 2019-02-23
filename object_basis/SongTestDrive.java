@@ -62,8 +62,8 @@ class SongTestDrive{
 		
 		/*
 		虽然在调用方法时抛出的异常不同,但是本质上都是空指针
-		只不过 b 骗过了编译器 
-		c没有骗过 但是在执行时被抓出来了
+		只不过 b 骗过了编译器 但是在执行时被抓出来了
+		c 没有骗过,直接被抓出来了
 			DogSong b = null;
 			DogSong c;
 			System.out.println(b);
@@ -72,12 +72,14 @@ class SongTestDrive{
 		
 		// 这样就可以
 		DogSong b = new DogSong();
+		DogSong c;
 		b.size = 12;
-		b.bark();
 		
 		// 因为是有返回值的 所以需要接收  不然返回的东西不知道飞哪儿去了
-		b = song.makerNewDogSong(b);
+		c = song.makerNewDogSong(b);
+		
 		b.bark();
+		c.bark();
 	}
 	
 	void forMakerObject(DogSong[] d ){
