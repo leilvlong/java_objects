@@ -70,7 +70,14 @@ class SongTestDrive{
 			System.out.println(b);
 		*/
 		
+		// 这样就可以
+		DogSong b = new DogSong();
+		b.size = 12;
+		b.bark();
 		
+		// 因为是有返回值的 所以需要接收  不然返回的东西不知道飞哪儿去了
+		b = song.makerNewDogSong(b);
+		b.bark();
 	}
 	
 	void forMakerObject(DogSong[] d ){
@@ -87,6 +94,7 @@ class SongTestDrive{
 	
 	DogSong makerNewDogSong(DogSong b){
 		b = new DogSong();
+		b.size = 72;		
 		return b; 
 	}  
 	
