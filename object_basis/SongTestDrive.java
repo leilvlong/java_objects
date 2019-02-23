@@ -57,7 +57,7 @@ class SongTestDrive{
 		但是执行时抛出异常 Exception in thread "main" java.lang.NullPointerException at SongTestDrive.main
 		仔细分析: System.out.println(Arrays.toString(d))
 		d的值为 [null,null,null]  这些null是装在数组中,是有内存空间的 
-		而b = null 虽然是个空,但有内存空间
+		而b = null 虽然是个null, 好吧 是我忘记接收返回值 导致的空指针
 		*/
 		
 		// 这样就可以
