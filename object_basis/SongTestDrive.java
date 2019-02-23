@@ -57,29 +57,30 @@ class SongTestDrive{
 		但是执行时抛出异常 Exception in thread "main" java.lang.NullPointerException at SongTestDrive.main
 		仔细分析: System.out.println(Arrays.toString(d))
 		d的值为 [null,null,null]  这些null是装在数组中,是有内存空间的 
-		而b = null 是个空指针,没有内存空间
-		*/
-		
-		/*
-		虽然在调用方法时抛出的异常不同,但是本质上都是空指针
-		只不过 b 骗过了编译器 但是在执行时被抓出来了
-		c 没有骗过,直接被抓出来了
-			DogSong b = null;
-			DogSong c;
-			System.out.println(b);
-			System.out.println(b);
+		而b = null 虽然是个空,但有内存空间
 		*/
 		
 		// 这样就可以
-		DogSong b = new DogSong();
-		DogSong c;
-		b.size = 12;
-		
-		// 因为是有返回值的 所以需要接收  不然返回的东西不知道飞哪儿去了
-		c = song.makerNewDogSong(b);
-		
-		b.bark();
+		DogSong c = null;
+		// 因为是有返回值的 所以需要接收 
+		c = song.makerNewDogSong(c);
 		c.bark();
+		
+		/*
+		以下代码抛出异常 未初始化的变量 即未开辟内存空间的变量 
+		java是通过值传递的 也就是说是通过拷贝传递的
+		这样的变量在被赋值之前(哪怕是null)什么也做不了
+			DogSong e;
+			e = song.makerNewDogSong(e);
+			e.bark();
+			
+		再来一个简单的例子:
+			依然是抛出未初始化
+			int a;
+			System.out.print(a);
+			a = a+1;
+		*/
+		
 	}
 	
 	void forMakerObject(DogSong[] d ){
